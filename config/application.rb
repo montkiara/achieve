@@ -23,6 +23,8 @@ module Achieve
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.action_view.field_error_proc = proc { |html_tag, _| html_tag }
-    config.web_console.whitelisted_ips = '10.0.2.2'
+    unless Rails.env.production?
+      config.web_console.whitelisted_ips = '10.0.2.2'
+    end
   end
 end
