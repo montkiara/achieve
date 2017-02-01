@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   PERMISSIBLE_ATTRIBUTES = %i(name avatar avatar_cache)
 
-  protected
+  private
 
     def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys: PERMISSIBLE_ATTRIBUTES)
