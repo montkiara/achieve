@@ -155,11 +155,11 @@ h1 {
 }
 
 img {
-  max-width: 100px;
+  max-width: 100%;
 }
 
 img {
-  max-height: 200px;
+  max-height: 100px;
 }
 /**
  * Add the correct background and color in IE 9-.
