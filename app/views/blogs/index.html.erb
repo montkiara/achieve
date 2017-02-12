@@ -6,7 +6,8 @@
     <% @blogs.each do |blog| %>
     <div class="row">
       <p>ID:<%= blog.user_id %></p>
-      <%= image_tag blog.user.image_url, size: '50x50' %>
+
+      <%= profile_img(blog.user) %>
       <p>ユーザ名:<%= blog.user.name %></p>
       <h4><strong><%= blog.title %></strong></h4>
       <p><%= blog.content %></p>
